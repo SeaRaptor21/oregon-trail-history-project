@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnijo4lpqgsh6"]
+[gd_scene load_steps=3 format=3 uid="uid://bnijo4lpqgsh6"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_hdyeg"]
+[ext_resource type="Texture2D" uid="uid://de06nxfb7f70m" path="res://a colourful vector s.jpg" id="2_16c0k"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -11,6 +12,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hdyeg")
 
+[node name="AColourfulVectorS" type="Sprite2D" parent="."]
+position = Vector2(576, 323.5)
+scale = Vector2(0.857143, 0.845052)
+texture = ExtResource("2_16c0k")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 6
@@ -18,22 +24,38 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -70.0
-offset_top = -50.5
-offset_bottom = 50.5
+offset_left = -535.0
+offset_top = -31.0
+offset_right = -241.0
+offset_bottom = 194.0
 grow_horizontal = 0
 grow_vertical = 2
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Begins the game"
 text = "Start"
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Opens the Options menu"
 text = "Options"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Exits the game :("
 text = "Quit"
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 695.0
+offset_top = 223.0
+offset_right = 837.0
+offset_bottom = 251.0
+text = "Traverse the Trail"
+
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
