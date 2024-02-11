@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/Menu.gd" id="1_i7d5b"]
 [ext_resource type="Texture2D" uid="uid://de06nxfb7f70m" path="res://assets/a colourful vector s.jpg" id="2_e602g"]
-[ext_resource type="FontFile" uid="uid://bv627uohfj52i" path="res://assets/CuteFont-Regular.ttf" id="3_ujklg"]
+[ext_resource type="FontFile" uid="uid://c3jypg8sx7370" path="res://assets/Nashville-z8w0.ttf" id="3_wnq0g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2g65w"]
 bg_color = Color(0.764706, 0.482353, 0.247059, 1)
@@ -74,7 +74,7 @@ size_flags_vertical = 3
 tooltip_text = "Begins the game"
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_ujklg")
+theme_override_fonts/font = ExtResource("3_wnq0g")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_2g65w")
 theme_override_styles/hover = SubResource("StyleBoxFlat_iuhvv")
@@ -85,7 +85,7 @@ text = "Start"
 layout_mode = 2
 size_flags_vertical = 3
 tooltip_text = "Opens the Options menu"
-theme_override_fonts/font = ExtResource("3_ujklg")
+theme_override_fonts/font = ExtResource("3_wnq0g")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_2g65w")
 theme_override_styles/hover = SubResource("StyleBoxFlat_iuhvv")
@@ -96,22 +96,23 @@ text = "Options"
 layout_mode = 2
 size_flags_vertical = 3
 tooltip_text = "Exits the game :("
-theme_override_fonts/font = ExtResource("3_ujklg")
+theme_override_fonts/font = ExtResource("3_wnq0g")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_2g65w")
 theme_override_styles/hover = SubResource("StyleBoxFlat_iuhvv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_2okv5")
 text = "Quit"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Title" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 605.0
+offset_left = 578.0
 offset_top = 207.0
-offset_right = 920.0
-offset_bottom = 268.0
-theme_override_fonts/normal_font = ExtResource("3_ujklg")
-theme_override_font_sizes/normal_font_size = 60
+offset_right = 954.0
+offset_bottom = 262.0
+theme_override_fonts/normal_font = ExtResource("3_wnq0g")
+theme_override_font_sizes/normal_font_size = 50
 text = "Traverse the Trail"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxg6b03sepuoq"]
+
+[ext_resource type="Script" path="res://scenes/audio_settings.gd" id="1_kjadk"]
+[ext_resource type="Texture2D" uid="uid://de06nxfb7f70m" path="res://assets/a colourful vector s.jpg" id="2_7mndw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxnvs"]
+bg_color = Color(0, 0, 0, 0.619608)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5lce"]
+bg_color = Color(0, 0, 0, 0.619608)
+
+[node name="HSlider" type="HSlider"]
+top_level = true
+visibility_layer = 4
+offset_right = 405.0
+offset_bottom = 166.0
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_kjadk")
+
+[node name="AudioBG" type="Sprite2D" parent="."]
+position = Vector2(577, 324)
+scale = Vector2(0.857143, 0.845052)
+texture = ExtResource("2_7mndw")
+
+[node name="Button" type="Button" parent="."]
+top_level = true
+visibility_layer = 2
+offset_right = 1154.0
+offset_bottom = 649.0
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_fxnvs")
+theme_override_styles/hover = SubResource("StyleBoxFlat_u5lce")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u5lce")

@@ -1,0 +1,119 @@
+[gd_scene load_steps=8 format=3 uid="uid://bj3use72eedq0"]
+
+[ext_resource type="Texture2D" uid="uid://de06nxfb7f70m" path="res://assets/a colourful vector s.jpg" id="1_oer7e"]
+[ext_resource type="FontFile" uid="uid://c3jypg8sx7370" path="res://assets/Nashville-z8w0.ttf" id="2_rl1iq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r7p7k"]
+bg_color = Color(0, 0, 0, 0.619608)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7gvpu"]
+bg_color = Color(0, 0, 0, 0.619608)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6j3hp"]
+bg_color = Color(0.764706, 0.482353, 0.247059, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.403922, 0.192157, 0.0627451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8up6"]
+bg_color = Color(0.509804, 0.305882, 0.133333, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.403922, 0.192157, 0.0627451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ebjv"]
+bg_color = Color(0.301961, 0.172549, 0.0627451, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.403922, 0.192157, 0.0627451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+top_level = true
+visibility_layer = 2
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 649.0
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_r7p7k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7gvpu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7gvpu")
+
+[node name="Settings" type="RichTextLabel" parent="."]
+top_level = true
+visibility_layer = 4
+offset_left = 508.0
+offset_top = 102.0
+offset_right = 654.0
+offset_bottom = 157.0
+theme_override_fonts/normal_font = ExtResource("2_rl1iq")
+theme_override_font_sizes/normal_font_size = 50
+text = "Settings"
+
+[node name="OptionsBackground" type="Sprite2D" parent="."]
+position = Vector2(578, 323)
+scale = Vector2(0.857143, 0.845052)
+texture = ExtResource("1_oer7e")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+top_level = true
+visibility_layer = 4
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.0
+offset_top = -89.5
+offset_right = 147.0
+offset_bottom = 135.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AudioSettings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Opens the Options menu"
+theme_override_fonts/font = ExtResource("2_rl1iq")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_6j3hp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a8up6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8ebjv")
+text = "Audio Settings"
+
+[node name="VideoSettings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Opens the Options menu"
+theme_override_fonts/font = ExtResource("2_rl1iq")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_6j3hp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a8up6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8ebjv")
+text = "Video Settings"
