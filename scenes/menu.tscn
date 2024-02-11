@@ -1,0 +1,117 @@
+[gd_scene load_steps=7 format=3 uid="uid://bnijo4lpqgsh6"]
+
+[ext_resource type="Script" path="res://scripts/Menu.gd" id="1_i7d5b"]
+[ext_resource type="Texture2D" uid="uid://de06nxfb7f70m" path="res://assets/a colourful vector s.jpg" id="2_e602g"]
+[ext_resource type="FontFile" uid="uid://bv627uohfj52i" path="res://assets/CuteFont-Regular.ttf" id="3_ujklg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2g65w"]
+bg_color = Color(0.764706, 0.482353, 0.247059, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.403922, 0.192157, 0.0627451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iuhvv"]
+bg_color = Color(0.509804, 0.305882, 0.133333, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.403922, 0.192157, 0.0627451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2okv5"]
+bg_color = Color(0.301961, 0.172549, 0.0627451, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.403922, 0.192157, 0.0627451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i7d5b")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576, 323.5)
+scale = Vector2(0.857143, 0.845052)
+texture = ExtResource("2_e602g")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -535.0
+offset_top = -31.0
+offset_right = -241.0
+offset_bottom = 194.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Begins the game"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ujklg")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_2g65w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iuhvv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2okv5")
+text = "Start"
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Opens the Options menu"
+theme_override_fonts/font = ExtResource("3_ujklg")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_2g65w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iuhvv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2okv5")
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Exits the game :("
+theme_override_fonts/font = ExtResource("3_ujklg")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_2g65w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iuhvv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2okv5")
+text = "Quit"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 207.0
+offset_right = 920.0
+offset_bottom = 268.0
+theme_override_fonts/normal_font = ExtResource("3_ujklg")
+theme_override_font_sizes/normal_font_size = 60
+text = "Traverse the Trail"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
