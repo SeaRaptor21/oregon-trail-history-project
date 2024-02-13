@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqq5utls4whu6"]
+
+[ext_resource type="Script" path="res://scenes/credits.gd" id="1_02bmh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxlc8"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sq0w4"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_02bmh")
+
+[node name="ignoremymethods" type="Button" parent="."]
+top_level = true
+visibility_layer = 2
+offset_right = 1154.0
+offset_bottom = 649.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_lxlc8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sq0w4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sq0w4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+top_level = true
+visibility_layer = 4
+layout_mode = 0
+offset_left = 364.0
+offset_top = 3.0
+offset_right = 847.0
+offset_bottom = 646.0
+text = "Copyright (c) Eric Schuette, William Ma, Rohan Ackroyd
+
+This work is licensed under the MIT License
+See the LICENSE file in the game folder for more details
+
+All programming done by Eric Schuette, William Ma, and Rohan Ackroyd. 
+
+Tile set by https://artyom-zagorskiy.itch.io/isometric-nature-pack
+Wagon texture by https://vectorportal.com/
+Menu image by https://runwayml.com/"
+
+[connection signal="meta_clicked" from="RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]

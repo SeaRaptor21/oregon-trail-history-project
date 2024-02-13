@@ -26,6 +26,7 @@ texture = ExtResource("2_7mndw")
 [node name="Button" type="Button" parent="."]
 top_level = true
 visibility_layer = 2
+layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 649.0
 theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)

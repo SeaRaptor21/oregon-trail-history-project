@@ -67,6 +67,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_7gvpu")
 [node name="Settings" type="RichTextLabel" parent="."]
 top_level = true
 visibility_layer = 4
+layout_mode = 0
 offset_left = 508.0
 offset_top = 102.0
 offset_right = 654.0
