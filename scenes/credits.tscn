@@ -1,12 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqq5utls4whu6"]
+[gd_scene load_steps=2 format=3 uid="uid://cqq5utls4whu6"]
 
 [ext_resource type="Script" path="res://scripts/credits.gd" id="1_02bmh"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxlc8"]
-bg_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sq0w4"]
-bg_color = Color(0, 0, 0, 1)
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -17,84 +11,38 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_02bmh")
 
-[node name="ignoremymethods" type="Button" parent="."]
-top_level = true
-visibility_layer = 2
+[node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1154.0
-offset_bottom = 649.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_lxlc8")
-theme_override_styles/hover = SubResource("StyleBoxFlat_sq0w4")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_sq0w4")
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.235294, 0.235294, 0.235294, 0.878431)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 top_level = true
 visibility_layer = 4
-layout_mode = 0
-offset_left = 364.0
-offset_top = 3.0
-offset_right = 877.0
-offset_bottom = 646.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -478.0
+offset_top = -277.0
+offset_right = 478.0
+offset_bottom = 277.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "Copyright (c) Eric Schuette, William Ma, Rohan Ackroyd
 
-This work is licensed under the
-See the LICENSE file in the game folder for more details
+This work is licensed under the [color=#0df][url=https://opensource.org/license/mit/]MIT License[/url][/color].
+See the LICENSE file in the game folder for more details.
 
 All programming done by Eric Schuette, William Ma, and Rohan Ackroyd. 
 
-Tile set by 
-Wagon texture by 
-Menu image by "
+Tile set by [color=#0df][url]https://artyom-zagorskiy.itch.io/isometric-nature-pack[/url][/color]
+Wagon texture by [color=#0df][url]https://vectorportal.com/[/url][/color],  [color=#0df][url=https://creativecommons.org/licenses/by/4.0/]CC BY[/url][/color]
+Menu image by [color=#0df][url]https://runwayml.com/[/url][/color]"
 
-[node name="TileSet" type="LinkButton" parent="."]
-top_level = true
-visibility_layer = 4
-layout_mode = 0
-offset_left = 446.0
-offset_top = 187.0
-offset_right = 867.0
-offset_bottom = 227.0
-theme_override_colors/font_color = Color(0.321569, 0.87451, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.580392, 0.580392, 0.580392, 1)
-text = "https://artyom-zagorskiy.itch.io/isometric-nature-pack"
-uri = "https://artyom-zagorskiy.itch.io/isometric-nature-pack"
-
-[node name="WagonTexture" type="LinkButton" parent="."]
-top_level = true
-visibility_layer = 4
-layout_mode = 0
-offset_left = 505.0
-offset_top = 210.0
-offset_right = 926.0
-offset_bottom = 250.0
-theme_override_colors/font_color = Color(0.321569, 0.87451, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.580392, 0.580392, 0.580392, 1)
-text = "https://vectorportal.com/"
-uri = "https://vectorportal.com/"
-
-[node name="MenuImage" type="LinkButton" parent="."]
-top_level = true
-visibility_layer = 4
-layout_mode = 0
-offset_left = 486.0
-offset_top = 234.0
-offset_right = 907.0
-offset_bottom = 274.0
-theme_override_colors/font_color = Color(0.321569, 0.87451, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.580392, 0.580392, 0.580392, 1)
-text = "https://runwayml.com/"
-uri = "https://runwayml.com/"
-
-[node name="MITLicense" type="LinkButton" parent="."]
-top_level = true
-visibility_layer = 4
-layout_mode = 0
-offset_left = 607.0
-offset_top = 49.0
-offset_right = 1028.0
-offset_bottom = 89.0
-theme_override_colors/font_color = Color(0.321569, 0.87451, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.580392, 0.580392, 0.580392, 1)
-text = "MIT License"
-uri = "https://opensource.org/license/mit/"
+[connection signal="meta_clicked" from="RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]
