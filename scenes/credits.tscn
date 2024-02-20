@@ -42,7 +42,7 @@ See the LICENSE file in the game folder for more details.
 All programming done by Eric Schuette, William Ma, and Rohan Ackroyd. 
 
 Tile set by [color=#0df][url]https://artyom-zagorskiy.itch.io/isometric-nature-pack[/url][/color]
-Wagon texture by [color=#0df][url]https://vectorportal.com/[/url][/color],  [color=#0df][url=https://creativecommons.org/licenses/by/4.0/]CC BY[/url][/color]
+Wagon texture by William Ma, made in BlockBench
 Menu image by [color=#0df][url]https://runwayml.com/[/url][/color]"
 
 [connection signal="meta_clicked" from="RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]
