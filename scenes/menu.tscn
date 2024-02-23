@@ -105,13 +105,22 @@ text = "Quit"
 
 [node name="Title" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 578.0
-offset_top = 207.0
-offset_right = 954.0
-offset_bottom = 262.0
+offset_left = 400.0
+offset_top = 99.0
+offset_right = 981.0
+offset_bottom = 283.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_wnq0g")
-theme_override_font_sizes/normal_font_size = 50
-text = "Traverse the Trail"
+theme_override_font_sizes/normal_font_size = 84
+text = "Traverse the Oregon Trail"
+
+[node name="Slideshow Link" type="Button" parent="."]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 337.0
+offset_right = 842.0
+offset_bottom = 432.0
+text = "Click on this link to learn more about the Oregon Trail!"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]

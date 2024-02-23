@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cm7fuksdkgmev"]
+
+[node name="DayNight" type="StaticBody2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -331050.0
+offset_top = -209489.0
+offset_right = 303052.0
+offset_bottom = 228337.0
+color = Color(9.65545e-05, 0.0100208, 0.132131, 0.54902)
