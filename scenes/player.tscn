@@ -27,5 +27,7 @@ texture = ExtResource("2_whr4l")
 visible = false
 polygon = PackedVector2Array(0, 20, 35, 0, 0, -20, -35, 0)
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
