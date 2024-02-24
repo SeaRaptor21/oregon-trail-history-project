@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://clkx1586m1b6b"]
+[gd_scene load_steps=41 format=3 uid="uid://clkx1586m1b6b"]
 
 [ext_resource type="Texture2D" uid="uid://brjdx0bknglgq" path="res://assets/tilemap_atlases/terrain.png" id="1_fmvpe"]
 [ext_resource type="Texture2D" uid="uid://bhtv23h60u16y" path="res://stone_ground(1).png" id="2_e15us"]
@@ -31,6 +31,9 @@
 [ext_resource type="Texture2D" uid="uid://dm3isomsvay14" path="res://stone(1).png" id="29_utrl7"]
 [ext_resource type="Texture2D" uid="uid://csycm46adme72" path="res://scenes/Screenshot_2024-02-23_at_10.36.31_AM-removebg-preview (1).png" id="30_7dshg"]
 [ext_resource type="Texture2D" uid="uid://dq8ff3mcq8b75" path="res://scenes/Screenshot_2024-02-23_at_9.03.55_PM-removebg-preview.png" id="31_cye21"]
+[ext_resource type="Texture2D" uid="uid://dss0kdagka3jd" path="res://Screenshot_2024-02-24_at_2.34.27_PM-removebg-preview.png" id="32_xed16"]
+[ext_resource type="Texture2D" uid="uid://djf30nicks0wc" path="res://Screenshot_2024-02-24_at_2.37.44_PM-removebg-preview.png" id="33_c11u4"]
+[ext_resource type="Texture2D" uid="uid://bjh1pr2vdvjlt" path="res://Screenshot_2024-02-24_at_2.39.47_PM-removebg-preview.png" id="34_daeem"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ujnxc"]
 texture = ExtResource("1_fmvpe")
@@ -420,7 +423,7 @@ layer_0/y_sort_enabled = true
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_ygurv")]
 z_index = 100
-position = Vector2(804, 576)
+position = Vector2(819, 464)
 
 [node name="DayNight" parent="." instance=ExtResource("5_rcipn")]
 visible = false
@@ -436,7 +439,7 @@ position = Vector2(58, 746)
 texture = ExtResource("11_5mhkh")
 
 [node name="Tree(5)" type="Sprite2D" parent="Decore"]
-position = Vector2(654, 450)
+position = Vector2(506, 1036)
 texture = ExtResource("9_lw8yn")
 
 [node name="StoneGround(7)" type="Sprite2D" parent="Decore"]
@@ -644,14 +647,14 @@ position = Vector2(-12761, -9167)
 texture = ExtResource("4_7qw16")
 
 [node name="Screenshot2024-02-23At10_36_31Am-removebg-preview(1)" type="Sprite2D" parent="."]
-position = Vector2(-30170, -19027)
-scale = Vector2(4.01657, 4.1959)
+position = Vector2(-30099, -19179.1)
+scale = Vector2(4.31182, 4.78328)
 texture = ExtResource("30_7dshg")
 
 [node name="Screenshot2024-02-23At9_03_55Pm-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(-22979.7, -14039.5)
+position = Vector2(-22770, -14342)
 rotation = 0.00872665
-scale = Vector2(1.47996, 1.45943)
+scale = Vector2(2.17051, 2.22819)
 texture = ExtResource("31_cye21")
 
 [node name="Tree(3)" type="Sprite2D" parent="."]
@@ -709,3 +712,25 @@ texture = ExtResource("18_ts8kc")
 [node name="Stone(8)2" type="Sprite2D" parent="."]
 position = Vector2(-9232, -6281)
 texture = ExtResource("19_j646v")
+
+[node name="Screenshot2024-02-24At2_34_27Pm-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(1013, 725)
+scale = Vector2(0.663834, 0.70236)
+texture = ExtResource("32_xed16")
+
+[node name="Screenshot2024-02-24At2_37_44Pm-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(398, 770)
+rotation = -6.28319
+texture = ExtResource("33_c11u4")
+
+[node name="Screenshot2024-02-24At2_34_27Pm-removebg-preview2" type="Sprite2D" parent="."]
+position = Vector2(-5922, -5205)
+texture = ExtResource("32_xed16")
+
+[node name="Screenshot2024-02-24At2_39_47Pm-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(-7256, -3937)
+texture = ExtResource("34_daeem")
+
+[node name="Screenshot2024-02-24At2_39_47Pm-removebg-preview2" type="Sprite2D" parent="."]
+position = Vector2(721, 1032)
+texture = ExtResource("34_daeem")
