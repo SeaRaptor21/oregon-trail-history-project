@@ -61,10 +61,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -535.0
-offset_top = -31.0
-offset_right = -241.0
-offset_bottom = 194.0
+offset_left = -606.0
+offset_top = -71.0
+offset_right = -167.0
+offset_bottom = 214.0
 grow_horizontal = 0
 grow_vertical = 2
 
@@ -103,6 +103,18 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_iuhvv")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_2okv5")
 text = "Quit"
 
+[node name="SlideshowLink" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+tooltip_text = "Exits the game :("
+theme_override_fonts/font = ExtResource("3_wnq0g")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_2g65w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iuhvv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2okv5")
+text = "Click to see slideshow 
+about the oregon trail"
+
 [node name="Title" type="RichTextLabel" parent="."]
 layout_mode = 0
 offset_left = 400.0
@@ -114,14 +126,8 @@ theme_override_fonts/normal_font = ExtResource("3_wnq0g")
 theme_override_font_sizes/normal_font_size = 84
 text = "Traverse the Oregon Trail"
 
-[node name="Slideshow Link" type="Button" parent="."]
-layout_mode = 0
-offset_left = 414.0
-offset_top = 337.0
-offset_right = 842.0
-offset_bottom = 432.0
-text = "Click on this link to learn more about the Oregon Trail!"
-
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SlideshowLink" to="." method="_on_slideshow_link_pressed"]
+[connection signal="pressed" from="VBoxContainer/SlideshowLink" to="." method="_on_quit_button_pressed"]
