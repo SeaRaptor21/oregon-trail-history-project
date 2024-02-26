@@ -1,0 +1,407 @@
+[gd_scene load_steps=16 format=3 uid="uid://uecjphl2otds"]
+
+[ext_resource type="Script" path="res://Control.gd" id="1_gu3jb"]
+[ext_resource type="Texture2D" uid="uid://bu0j2qfjt6wla" path="res://assets/Screenshot 2024-02-25 at 12.02.20 PM.png" id="2_seg14"]
+[ext_resource type="FontFile" uid="uid://cau4ru4ih0cx6" path="res://assets/Bevan-Italic.ttf" id="3_v58w2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fnvj"]
+bg_color = Color(0.662745, 0.572549, 0.380392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5uhjj"]
+bg_color = Color(0.662745, 0.572549, 0.380392, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_moy0b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwm7a"]
+bg_color = Color(0.662745, 0.572549, 0.380392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d6ey8"]
+bg_color = Color(0.662745, 0.572549, 0.380392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kq38k"]
+bg_color = Color(0.415686, 0.635294, 0.560784, 0.811765)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_stvan"]
+bg_color = Color(0.662745, 0.572549, 0.380392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opf33"]
+bg_color = Color(0.662745, 0.572549, 0.380392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qt578"]
+bg_color = Color(0.662745, 0.572549, 0.380392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dryo2"]
+bg_color = Color(0.662745, 0.572549, 0.380392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_obvfw"]
+bg_color = Color(0.662745, 0.572549, 0.380392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fi6yt"]
+bg_color = Color(0.662745, 0.572549, 0.380392, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gu3jb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.745098, 0.709804, 0.694118, 1)
+position = Vector2(326, 562)
+scale = Vector2(1.26316, 1.01887)
+texture = ExtResource("2_seg14")
+offset = Vector2(197.917, -233.593)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="food" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -9.0
+offset_top = -14.0
+offset_right = 31.0
+offset_bottom = 26.0
+
+[node name="foodbutton" type="Panel" parent="food"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 116.0
+offset_right = 567.0
+offset_bottom = 198.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6fnvj")
+
+[node name="addfood" type="Button" parent="food/foodbutton"]
+offset_right = 208.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("3_v58w2")
+theme_override_font_sizes/font_size = 14
+text = "Press to add food 
++50 lb. pre click,
+$0.20 per pound"
+
+[node name="Panel" type="Panel" parent="food"]
+layout_mode = 0
+offset_left = 659.0
+offset_top = 122.0
+offset_right = 847.0
+offset_bottom = 192.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5uhjj")
+
+[node name="textlabelfood" type="Label" parent="food/Panel"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 3.0
+offset_right = 153.0
+offset_bottom = 26.0
+text = "Pounds of food:"
+label_settings = SubResource("LabelSettings_moy0b")
+
+[node name="foodamount" type="Label" parent="food/Panel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 61.0
+offset_top = 32.0
+offset_right = 101.0
+offset_bottom = 55.0
+text = "0
+"
+
+[node name="nofood" type="Label" parent="food/Panel"]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 32.0
+offset_right = 166.0
+offset_bottom = 55.0
+text = "pounds"
+
+[node name="oxen" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 189.0
+offset_top = 136.0
+offset_right = 229.0
+offset_bottom = 176.0
+
+[node name="Panel" type="Panel" parent="oxen"]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 95.0
+offset_right = 370.0
+offset_bottom = 175.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dwm7a")
+
+[node name="addoxen" type="Button" parent="oxen/Panel"]
+layout_mode = 0
+offset_right = 206.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("3_v58w2")
+theme_override_font_sizes/font_size = 14
+text = "Press to add yoke of oxen
++1 yoke per click
+$40 per yoke"
+
+[node name="Panel2" type="Panel" parent="oxen"]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 101.0
+offset_right = 649.0
+offset_bottom = 174.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d6ey8")
+
+[node name="textlabelyoke" type="Label" parent="oxen/Panel2"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 8.0
+offset_right = 152.0
+offset_bottom = 31.0
+text = "Yokes of oxen:"
+
+[node name="nooxen" type="Label" parent="oxen/Panel2"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 38.0
+offset_right = 135.0
+offset_bottom = 61.0
+text = "yokes"
+
+[node name="yokeamount" type="Label" parent="oxen/Panel2"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 59.0
+offset_top = 39.0
+offset_right = 99.0
+offset_bottom = 62.0
+text = "0"
+
+[node name="money" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="moneyback" type="Panel" parent="money"]
+layout_mode = 0
+offset_left = 872.0
+offset_top = 41.0
+offset_right = 1124.0
+offset_bottom = 136.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kq38k")
+
+[node name="moneylabel" type="Label" parent="money/moneyback"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = -8.0
+offset_right = 164.0
+offset_bottom = 87.0
+theme_override_fonts/font = ExtResource("3_v58w2")
+text = "
+	    Money left 
+	    on account:"
+
+[node name="moneyleft" type="Label" parent="money/moneyback"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 171.0
+offset_top = 45.0
+offset_right = 248.0
+offset_bottom = 74.0
+rotation = -0.00035991
+theme_override_fonts/font = ExtResource("3_v58w2")
+text = "1800"
+
+[node name="nomoney" type="Label" parent="money/moneyback"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.109
+anchor_bottom = 0.121
+offset_left = 159.0
+offset_top = 46.0
+offset_right = 145.532
+offset_bottom = 57.505
+theme_override_fonts/font = ExtResource("3_v58w2")
+text = "$"
+
+[node name="clothing" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 0.017
+anchor_bottom = 0.031
+offset_left = 368.0
+offset_top = 356.0
+offset_right = 546.416
+offset_bottom = 397.912
+
+[node name="Panel" type="Panel" parent="clothing"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = -10.0
+offset_right = 204.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_stvan")
+
+[node name="addclothing" type="Button" parent="clothing/Panel"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 226.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("3_v58w2")
+theme_override_font_sizes/font_size = 14
+text = "Press to add 1 set of clothing
++1 set per click
+$5 per set"
+
+[node name="Panel2" type="Panel" parent="clothing"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.479
+anchor_bottom = 0.323
+offset_left = 286.0
+offset_top = 2.0
+offset_right = 177.158
+offset_bottom = 44.974
+theme_override_styles/panel = SubResource("StyleBoxFlat_opf33")
+
+[node name="Label" type="Label" parent="clothing/Panel2"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 7.0
+offset_right = 157.0
+offset_bottom = 30.0
+text = "Sets of clothing:"
+
+[node name="Label2" type="Label" parent="clothing/Panel2"]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 31.0
+offset_right = 133.0
+offset_bottom = 54.0
+text = "sets"
+
+[node name="clothingamount" type="Label" parent="clothing/Panel2"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 50.0
+offset_top = 33.0
+offset_right = 90.0
+offset_bottom = 56.0
+text = "0"
+
+[node name="ammo" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 85.0
+offset_top = 524.0
+offset_right = 125.0
+offset_bottom = 564.0
+
+[node name="Panel" type="Panel" parent="ammo"]
+layout_mode = 0
+offset_right = 222.0
+offset_bottom = 79.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qt578")
+
+[node name="addammo" type="Button" parent="ammo/Panel"]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("3_v58w2")
+theme_override_font_sizes/font_size = 14
+text = "Press to add boxes of ammo 
++20 bullets per click/box
+$2 per box"
+
+[node name="Panel2" type="Panel" parent="ammo"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 2.0
+offset_right = 427.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dryo2")
+
+[node name="Label" type="Label" parent="ammo/Panel2"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 9.0
+offset_right = 152.0
+offset_bottom = 32.0
+text = "Boxes of ammo:"
+
+[node name="Label2" type="Label" parent="ammo/Panel2"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 42.0
+offset_right = 138.0
+offset_bottom = 65.0
+text = "boxes"
+
+[node name="ammoamount" type="Label" parent="ammo/Panel2"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 55.0
+offset_top = 41.0
+offset_right = 95.0
+offset_bottom = 64.0
+text = "0"
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 525.0
+offset_right = 791.0
+offset_bottom = 605.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_obvfw")
+
+[node name="addspartparts" type="Button" parent="Control/Panel"]
+layout_mode = 0
+offset_right = 195.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("3_v58w2")
+theme_override_font_sizes/font_size = 14
+text = "Press to add spare parts
++1 wheel, axle, & tongue
+$30 per \"set\" of 3 parts"
+
+[node name="Panel2" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 847.0
+offset_top = 526.0
+offset_right = 1038.0
+offset_bottom = 601.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fi6yt")
+
+[node name="Label" type="Label" parent="Control/Panel2"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = -1.0
+offset_right = 169.0
+offset_bottom = 22.0
+text = "\"Sets\" of spare parts:"
+
+[node name="spareparts" type="Label" parent="Control/Panel2"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 47.0
+offset_top = 37.0
+offset_right = 87.0
+offset_bottom = 60.0
+text = "0"
+
+[node name="Label3" type="Label" parent="Control/Panel2"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 26.0
+offset_right = 174.0
+offset_bottom = 75.0
+text = "Wheels, axles,
+& tongues"
+
+[connection signal="pressed" from="food/foodbutton/addfood" to="." method="_on_addfood_pressed"]
+[connection signal="pressed" from="oxen/Panel/addoxen" to="." method="_on_addoxen_pressed"]
+[connection signal="pressed" from="clothing/Panel/addclothing" to="." method="_on_addclothing_pressed"]
+[connection signal="pressed" from="clothing/Panel/addclothing" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ammo/Panel/addammo" to="." method="_on_addammo_pressed"]
+[connection signal="pressed" from="Control/Panel/addspartparts" to="." method="_on_addspartparts_pressed"]
