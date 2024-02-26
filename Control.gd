@@ -76,3 +76,10 @@ func _on_addspartparts_pressed():
 	if spare_parts<=20 and money_left>0:
 		spareparts.text = str(spare_parts)
 		moneyleft.text = str(money_left)
+
+
+
+
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
