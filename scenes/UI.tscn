@@ -73,6 +73,7 @@ offset_bottom = 198.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_6fnvj")
 
 [node name="addfood" type="Button" parent="food/foodbutton"]
+layout_mode = 0
 offset_right = 208.0
 offset_bottom = 82.0
 theme_override_fonts/font = ExtResource("3_v58w2")

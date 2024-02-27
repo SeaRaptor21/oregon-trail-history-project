@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://clkx1586m1b6b"]
+[gd_scene load_steps=56 format=3 uid="uid://clkx1586m1b6b"]
 
 [ext_resource type="Texture2D" uid="uid://brjdx0bknglgq" path="res://assets/tilemap_atlases/terrain.png" id="1_fmvpe"]
 [ext_resource type="Texture2D" uid="uid://bhtv23h60u16y" path="res://assets/stone_ground(1).png" id="2_e15us"]
@@ -44,8 +44,8 @@
 [ext_resource type="Texture2D" uid="uid://ddyiy3pecrfuv" path="res://assets/Screenshot_2024-02-24_at_7.45.40_PM-removebg-preview.png" id="42_pkgig"]
 [ext_resource type="Script" path="res://scenes/Panel.gd" id="43_g2ufd"]
 [ext_resource type="Texture2D" uid="uid://cxtskendigh3i" path="res://assets/Screenshot_2024-02-24_at_7.46.49_PM-removebg-preview.png" id="43_r2rfd"]
+[ext_resource type="FontFile" uid="uid://bv627uohfj52i" path="res://assets/CuteFont-Regular.ttf" id="44_7bjob"]
 [ext_resource type="Texture2D" uid="uid://j5jgf33hsfpp" path="res://assets/Screenshot_2024-02-25_at_10.15.26_AM-removebg-preview.png" id="44_b5ay0"]
-[ext_resource type="Texture2D" uid="uid://po6jd3leknde" path="res://assets/Screenshot 2024-02-25 at 12.30.44 PM.png" id="44_gkjp3"]
 [ext_resource type="Texture2D" uid="uid://cbenxvw4wg4qu" path="res://assets/Wagon isometric.png" id="45_vlb4g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ujnxc"]
@@ -414,7 +414,13 @@ sources/3 = SubResource("TileSetAtlasSource_23pu7")
 tile_proxies/coords_level = [[1, Vector2i(0, 0)], [3, Vector2i(0, 0)], [1, Vector2i(0, 1)], [3, Vector2i(0, 1)], [2, Vector2i(0, 0)], [3, Vector2i(1, 0)], [3, Vector2i(0, 0)], [9, Vector2i(1, 0)], [4, Vector2i(0, 0)], [9, Vector2i(2, 0)], [5, Vector2i(0, 0)], [48, Vector2i(2, 0)], [6, Vector2i(0, 0)], [48, Vector2i(3, 0)], [7, Vector2i(0, 0)], [48, Vector2i(4, 0)], [8, Vector2i(0, 0)], [9, Vector2i(3, 0)], [9, Vector2i(0, 0)], [3, Vector2i(2, 0)], [9, Vector2i(1, 0)], [3, Vector2i(3, 0)], [9, Vector2i(2, 0)], [3, Vector2i(4, 0)], [9, Vector2i(3, 0)], [3, Vector2i(5, 0)], [10, Vector2i(0, 0)], [18, Vector2i(0, 0)], [11, Vector2i(0, 0)], [18, Vector2i(1, 0)], [12, Vector2i(0, 0)], [18, Vector2i(2, 0)], [13, Vector2i(0, 0)], [18, Vector2i(3, 0)], [14, Vector2i(0, 0)], [18, Vector2i(4, 0)], [15, Vector2i(0, 0)], [18, Vector2i(5, 0)], [16, Vector2i(0, 0)], [18, Vector2i(6, 0)], [17, Vector2i(0, 0)], [18, Vector2i(7, 0)], [18, Vector2i(0, 0)], [48, Vector2i(11, 0)], [19, Vector2i(0, 0)], [48, Vector2i(12, 0)], [20, Vector2i(0, 0)], [48, Vector2i(13, 0)], [21, Vector2i(0, 0)], [48, Vector2i(14, 0)], [22, Vector2i(0, 0)], [48, Vector2i(15, 0)], [23, Vector2i(0, 0)], [48, Vector2i(16, 0)], [24, Vector2i(0, 0)], [48, Vector2i(17, 0)], [26, Vector2i(0, 0)], [48, Vector2i(18, 0)], [30, Vector2i(0, 0)], [48, Vector2i(19, 0)], [31, Vector2i(0, 0)], [48, Vector2i(20, 0)], [32, Vector2i(0, 0)], [48, Vector2i(21, 0)], [33, Vector2i(0, 0)], [48, Vector2i(22, 0)], [34, Vector2i(0, 0)], [48, Vector2i(23, 0)], [35, Vector2i(0, 0)], [48, Vector2i(24, 0)], [36, Vector2i(0, 0)], [48, Vector2i(25, 0)], [37, Vector2i(0, 0)], [48, Vector2i(26, 0)], [38, Vector2i(0, 0)], [48, Vector2i(27, 0)], [39, Vector2i(0, 0)], [48, Vector2i(28, 0)], [40, Vector2i(0, 0)], [48, Vector2i(29, 0)], [43, Vector2i(0, 0)], [48, Vector2i(0, 1)], [44, Vector2i(0, 0)], [48, Vector2i(1, 1)], [45, Vector2i(0, 0)], [48, Vector2i(2, 1)], [49, Vector2i(0, 0)], [72, Vector2i(0, 0)], [50, Vector2i(0, 0)], [72, Vector2i(1, 0)], [51, Vector2i(0, 0)], [72, Vector2i(2, 0)], [52, Vector2i(0, 0)], [72, Vector2i(3, 0)], [53, Vector2i(0, 0)], [72, Vector2i(4, 0)], [54, Vector2i(0, 0)], [72, Vector2i(5, 0)], [55, Vector2i(0, 0)], [72, Vector2i(6, 0)], [56, Vector2i(0, 0)], [72, Vector2i(7, 0)], [57, Vector2i(0, 0)], [72, Vector2i(8, 0)], [58, Vector2i(0, 0)], [72, Vector2i(9, 0)], [59, Vector2i(0, 0)], [72, Vector2i(10, 0)], [60, Vector2i(0, 0)], [72, Vector2i(11, 0)], [61, Vector2i(0, 0)], [72, Vector2i(12, 0)], [62, Vector2i(0, 0)], [72, Vector2i(13, 0)], [63, Vector2i(0, 0)], [72, Vector2i(14, 0)], [64, Vector2i(0, 0)], [72, Vector2i(15, 0)], [65, Vector2i(0, 0)], [72, Vector2i(16, 0)], [66, Vector2i(0, 0)], [72, Vector2i(17, 0)], [67, Vector2i(0, 0)], [72, Vector2i(18, 0)], [68, Vector2i(0, 0)], [72, Vector2i(19, 0)], [69, Vector2i(0, 0)], [72, Vector2i(20, 0)]]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f2mvw"]
-bg_color = Color(0.968627, 0.631373, 0.431373, 1)
+bg_color = Color(0.705882, 0.705882, 0.705882, 0.784314)
+border_width_top = 5
+border_color = Color(0, 0, 0, 1)
+expand_margin_top = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tklor"]
+size = Vector2(5002.17, 1248.55)
 
 [node name="Main" type="Node2D"]
 
@@ -838,57 +844,26 @@ texture = ExtResource("41_ataob")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
-self_modulate = Color(0.60073, 0.462867, 0.400289, 1)
 anchors_preset = -1
 anchor_right = 0.035
 anchor_bottom = 0.062
-offset_top = 406.0
-offset_right = 1111.68
-offset_bottom = 608.824
+offset_left = -15.0
+offset_top = 400.0
+offset_right = 1121.68
+offset_bottom = 639.824
 theme_override_styles/panel = SubResource("StyleBoxFlat_f2mvw")
 script = ExtResource("43_g2ufd")
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Panel"]
-layout_mode = 0
-offset_left = 36.0
-offset_top = 32.0
-offset_right = 171.0
-offset_bottom = 147.0
-texture = ExtResource("44_gkjp3")
-expand_mode = 5
-
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Panel"]
-layout_mode = 0
-offset_left = 36.0
-offset_top = 32.0
-offset_right = 171.0
-offset_bottom = 147.0
-texture = ExtResource("45_vlb4g")
-expand_mode = 5
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Panel"]
-layout_mode = 0
-offset_left = 38.0
-offset_top = 150.0
-offset_right = 184.0
-offset_bottom = 201.0
-text = "Wagon and oxen"
-
 [node name="Label" type="Label" parent="CanvasLayer/Panel"]
 layout_mode = 0
-offset_left = 266.0
-offset_top = 33.0
-offset_right = 353.0
-offset_bottom = 61.0
-text = "Food Left:"
-
-[node name="Label2" type="Label" parent="CanvasLayer/Panel"]
-layout_mode = 0
-offset_left = 353.0
-offset_top = 34.0
-offset_right = 393.0
-offset_bottom = 57.0
-text = "0"
+offset_left = 435.0
+offset_top = 31.0
+offset_right = 763.0
+offset_bottom = 168.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("44_7bjob")
+theme_override_font_sizes/font_size = 40
+text = "All of the text for the UI :)"
 
 [node name="Screenshot2024-02-24At4_19_07Pm-removebg-preview" type="Sprite2D" parent="."]
 position = Vector2(-36611, -20433)
@@ -963,3 +938,11 @@ texture = ExtResource("45_vlb4g")
 [node name="Screenshot2024-02-24At2_37_44Pm-removebg-preview4" type="Sprite2D" parent="."]
 position = Vector2(-93683, -53120)
 texture = ExtResource("33_c11u4")
+
+[node name="End" type="Area2D" parent="."]
+position = Vector2(-99344, -57726)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="End"]
+position = Vector2(309.141, 234.781)
+rotation = -0.523599
+shape = SubResource("RectangleShape2D_tklor")

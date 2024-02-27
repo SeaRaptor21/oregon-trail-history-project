@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=3 uid="uid://obrigy1oxjp1"]
+
+[ext_resource type="Script" path="res://EndScene.gd" id="1_y8vgr"]
+[ext_resource type="FontFile" uid="uid://cau4ru4ih0cx6" path="res://assets/Bevan-Italic.ttf" id="2_w5yyc"]
+[ext_resource type="FontFile" uid="uid://bv627uohfj52i" path="res://assets/CuteFont-Regular.ttf" id="3_qcwcr"]
+[ext_resource type="FontFile" uid="uid://c3jypg8sx7370" path="res://assets/Nashville-z8w0.ttf" id="4_4yls0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x67ob"]
+bg_color = Color(0.533333, 0.356863, 0.207843, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pef1b"]
+bg_color = Color(0.764706, 0.482353, 0.247059, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.403922, 0.192157, 0.0627451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ei1s3"]
+bg_color = Color(0.509804, 0.305882, 0.133333, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.403922, 0.192157, 0.0627451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1pxr"]
+bg_color = Color(0.301961, 0.172549, 0.0627451, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.403922, 0.192157, 0.0627451, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="EndScene" type="Node2D"]
+script = ExtResource("1_y8vgr")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1167.0
+offset_bottom = 699.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_x67ob")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 155.0
+offset_right = 949.0
+offset_bottom = 276.0
+theme_override_fonts/font = ExtResource("2_w5yyc")
+theme_override_font_sizes/font_size = 75
+text = "Congratulations!"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 356.0
+offset_top = 276.0
+offset_right = 801.0
+offset_bottom = 337.0
+theme_override_fonts/font = ExtResource("3_qcwcr")
+theme_override_font_sizes/font_size = 60
+text = "You reached Oregon City!"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 375.0
+offset_top = 390.0
+offset_right = 787.0
+offset_bottom = 478.0
+theme_override_fonts/font = ExtResource("4_4yls0")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_pef1b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ei1s3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b1pxr")
+text = "Quit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
