@@ -1,8 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://uecjphl2otds"]
+[gd_scene load_steps=18 format=3 uid="uid://uecjphl2otds"]
 
 [ext_resource type="Script" path="res://Control.gd" id="1_gu3jb"]
 [ext_resource type="Texture2D" uid="uid://bu0j2qfjt6wla" path="res://assets/Screenshot 2024-02-25 at 12.02.20 PM.png" id="2_seg14"]
 [ext_resource type="FontFile" uid="uid://cau4ru4ih0cx6" path="res://assets/Bevan-Italic.ttf" id="3_v58w2"]
+[ext_resource type="FontFile" uid="uid://c3jypg8sx7370" path="res://assets/Nashville-z8w0.ttf" id="4_mrjp5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fnvj"]
 bg_color = Color(0.662745, 0.572549, 0.380392, 1)
@@ -38,6 +39,9 @@ bg_color = Color(0.662745, 0.572549, 0.380392, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fi6yt"]
 bg_color = Color(0.662745, 0.572549, 0.380392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_urv4h"]
+bg_color = Color(0.705882, 0.588235, 0.494118, 0.992157)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -400,9 +404,36 @@ offset_bottom = 75.0
 text = "Wheels, axles,
 & tongues"
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 3.0
+offset_right = 738.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("4_mrjp5")
+theme_override_font_sizes/font_size = 47
+text = "Welcome to the Shop!
+Buy what you need here!"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 937.0
+offset_top = 397.0
+offset_right = 1121.0
+offset_bottom = 467.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_urv4h")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 184.0
+offset_bottom = 70.0
+text = "Click to exit the 
+shop -->"
+
 [connection signal="pressed" from="food/foodbutton/addfood" to="." method="_on_addfood_pressed"]
 [connection signal="pressed" from="oxen/Panel/addoxen" to="." method="_on_addoxen_pressed"]
 [connection signal="pressed" from="clothing/Panel/addclothing" to="." method="_on_addclothing_pressed"]
 [connection signal="pressed" from="clothing/Panel/addclothing" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ammo/Panel/addammo" to="." method="_on_addammo_pressed"]
 [connection signal="pressed" from="Control/Panel/addspartparts" to="." method="_on_addspartparts_pressed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
